@@ -109,10 +109,10 @@ Add the following to the script part of the package.json.
 }
 ```
 
-You need a configuration file `.stylelintrc.json` with the ruleset to use. You can star by downloading the one used in this project.
+You need a configuration file `.stylelintrc.json` with the ruleset to use. You can start by downloading the one used in this project.
 
 ```
-wget -s https://gitlab.com/mikael-roos/development-environment-javascript/-/raw/main/.stylelintrc.json
+wget -q https://raw.githubusercontent.com/dbwebb-se/devjs/main/.stylelintrc.json
 ```
 
 You can now execute it like this to validate (and fix) all css-files below the public directory.
