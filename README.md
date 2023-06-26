@@ -104,7 +104,8 @@ Add the following to the script part of the package.json.
 ```json
 {
     "scripts": {
-        "stylelint": "npx stylelint \"./public/**/*.css\" || exit 0"
+        "stylelint": "npx stylelint \"./public/**/*.css\" || exit 0",    
+        "stylelint:fix": "npx stylelint --fix \"./public/**/*.css\" || exit 0",
     }
 }
 ```
