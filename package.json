@@ -8,7 +8,9 @@
     "http-server": "npx http-server -p 9001",
     "htmlhint": "npx htmlhint ./public || exit 0",
     "stylelint": "npx stylelint \"./public/**/*.css\" || exit 0",
-    "stylelint:fix": "npx stylelint --fix \"./public/**/*.css\" || exit 0"
+    "stylelint:fix": "npx stylelint --fix \"./public/**/*.css\" || exit 0",
+    "eslint": "npx eslint . || exit 0",
+    "eslint:fix": "npx eslint . --fix || exit 0"
   },
   "keywords": [],
   "author": "",
