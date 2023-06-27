@@ -128,5 +128,30 @@ npm run stylelint:fix
 Install eslint and configure it
 ------------------------
 
-_How to do it the simplest way?_
+The tool [eslint](https://www.npmjs.com/package/eslint) checks and fixes your JavaScript files.
 
+Do this to install eslint and to set it up to use a coding standard.
+
+```
+npm init @eslint/config
+```
+
+During the installation process you are asked a few questions to help configuring and installing the tool.
+
+After the installation is done you may add the following scripts to the script part of the package.json.
+
+```json
+{
+    "scripts": {
+        "eslint": "npx eslint . || exit 0",
+        "eslint:fix": "npx eslint . --fix || exit 0"
+    }
+}
+```
+
+You can now execute it like this.
+
+```
+npm run lint
+npm run lint:fix
+```
