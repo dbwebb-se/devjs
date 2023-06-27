@@ -158,6 +158,81 @@ npm run lint:fix
 
 
 
+Enforce JSDoc comments using eslint
+------------------------
+
+To enforce JSDoc comments the following is added.
+
+First install the jsdoc-plugin for eslint.
+
+```
+npm install --save-dev eslint-plugin-jsdoc
+```
+
+Then add the following to the eslint configuration file.
+
+```json
+{
+  "plugins": [
+    "jsdoc"
+  ]
+}
+```
+
+Ensure that the `extends:` also contains this.
+
+```json
+{
+  "extends": [
+    "plugin:jsdoc/recommended"
+  ]
+}
+```
+
+Add the following to the `rules:` section. It extends the recommended rule set.
+
+```json
+{
+    "rules": {
+        "jsdoc/require-jsdoc": [1, {
+            "require": {
+              "ClassDeclaration": true,
+              "MethodDefinition": true
+            }
+          }],
+          "jsdoc/require-description": 1,
+          "jsdoc/require-description-complete-sentence": 1
+    }
+}
+```
+
+You can now run eslint. You can even partially fix missing JSDoc comments.
+
+```
+npm run eslint
+npm run eslint:fix
+```
+
+
+### Example on JSDoc comments
+
+This is how the JSDOC should look like for a function.
+
+```js
+/**
+ * Calculates the sum of the parameters.
+ *
+ * @param {number} x - Operand.
+ * @param {number} y - Operand.
+ * @returns {number} The sum of the operands.
+ */
+function add(x, y) {
+  return x + y
+}
+```
+
+
+
 Run all linters
 ------------------------
 
