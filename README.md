@@ -125,7 +125,7 @@ npm run stylelint:fix
 
 
 
-Install eslint and configure it
+Install JavaScript linter eslint and configure it
 ------------------------
 
 The tool [eslint](https://www.npmjs.com/package/eslint) checks and fixes your JavaScript files.
