@@ -155,3 +155,93 @@ You can now execute it like this.
 npm run lint
 npm run lint:fix
 ```
+
+
+
+Run all linters
+------------------------
+
+Execute all linters with one command.
+
+This is how the script are defined.
+
+```json
+{
+    "scripts": {
+        "lint": "npm run htmlhint && npm run stylelint && npm run eslint",
+    }
+}
+```
+
+You can run the command like this.
+
+```
+npm run lint
+```
+
+
+
+Generate JSDoc
+------------------------
+
+This is how to generate documentation using JSDoc for your project.
+
+Start by installing the tool.
+
+```
+npm install --save-dev jsdoc
+```
+
+You need a configuration file `.jsdoc.json` with the ruleset to use. You can start by downloading the one used in this project.
+
+```
+wget -q https://raw.githubusercontent.com/dbwebb-se/devjs/main/.jsdoc.json
+```
+
+Then add the following scripts to your package.json.
+
+```json
+{
+  "scripts": {
+    "jsdoc": "npx jsdoc -c .jsdoc.json || exit 0",
+  },
+}
+```
+
+You can now run the command to generate the documentation.
+
+```
+npm run jsdoc
+```
+
+The documentation is generated to `build/jsdoc` and you can point your browser to view it.
+ 
+You can read more on "[Configuring JSDoc with a configuration file](https://jsdoc.app/about-configuring-jsdoc.html)" if needed.
+
+
+
+Clean up all generated files
+------------------------
+
+Remove all generated files with npm run clean.
+You can remove all installed and generated files using npm run clean-all.
+This is how the scripts are defined. Modify the scripts when needed to clean out all generated files.
+
+```json
+{
+    "scripts": {
+        "clean": "rm -rf build/",
+        "clean-all": "npm run clean && rm -rf node_modules/ && rm -f package-lock.json"
+    }
+}
+```
+
+You can now run the commands like this.
+
+```
+npm run clean
+npm run clean-all
+```
+
+If you clean all generated files, then you need to install them again using `npm install`.
+
