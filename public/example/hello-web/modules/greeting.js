@@ -1,1 +1,1 @@
-export const greeting = "Hello from a module!"
+export const greeting = 'Hello from a module!'
