@@ -102,7 +102,13 @@ npm install stylelint stylelint-config-recommended --save-dev
 You need a configuration file `.stylelintrc.json` with the ruleset to use, start with this one (save it as `stylelintrc.json`).
 
 ```json
-
+{
+  "ignoreFiles": [
+    "**/*.min.css",
+    "dist/"
+  ],
+  "extends": ["stylelint-config-recommended"]
+}
 ```
 
 Add the following to the script part of the package.json.
