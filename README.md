@@ -96,7 +96,13 @@ The tool [stylelint](https://www.npmjs.com/package/stylelint) checks your CSS fi
 Do this to install stylelint.
 
 ```
-npm install stylelint --save-dev
+npm install stylelint stylelint-config-recommended --save-dev
+```
+
+You need a configuration file `.stylelintrc.json` with the ruleset to use, start with this one (save it as `stylelintrc.json`).
+
+```json
+
 ```
 
 Add the following to the script part of the package.json.
@@ -108,12 +114,6 @@ Add the following to the script part of the package.json.
         "stylelint:fix": "npx stylelint --fix \"./public/**/*.css\" || exit 0",
     }
 }
-```
-
-You need a configuration file `.stylelintrc.json` with the ruleset to use. You can start by downloading the one used in this project.
-
-```
-wget -q https://raw.githubusercontent.com/dbwebb-se/devjs/main/.stylelintrc.json
 ```
 
 You can now execute it like this to validate (and fix) all css-files below the public directory.
