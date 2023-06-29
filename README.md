@@ -7,6 +7,20 @@ The instructions below is for how to setup a development project like this, from
 
 
 
+ToDo
+------------------------
+
+These are possible todos that we want to add to the development environment when going to "2025".
+
+* .editorconfig
+* esbuild to `dist/` with minification
+* verify how it works with node
+* verify that it works with typescript
+* add sass/scss compiler for stylesheets
+* compress and resize images
+
+
+
 Create the package.json
 ------------------------
 
