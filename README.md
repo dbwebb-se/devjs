@@ -18,6 +18,7 @@ These are possible todos that we want to add to the development environment when
 * verify that it works with typescript
 * add sass/scss compiler for stylesheets
 * compress and resize images
+* add docker structure for images
 
 
 
